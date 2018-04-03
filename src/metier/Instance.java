@@ -253,6 +253,7 @@ public class Instance implements Serializable {
 				this.nplanning = p;
 				this.vehiculeSet = p.getEnsVehicules();
 				this.updatePositions();
+				return true;
 			} else {
 				return false;
 			}
