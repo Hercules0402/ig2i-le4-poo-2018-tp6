@@ -1,5 +1,6 @@
 package metier;
 
+import algo.MouvementTabou;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -261,4 +262,9 @@ public class Instance implements Serializable {
 			return false;
 		}
 	}
+
+	public MouvementTabou bestMove(List<MouvementTabou> tabuList) {
+		return null;
+	}
+
 }
