@@ -1,4 +1,4 @@
-# Session 5 [![Build Status](https://travis-ci.org/eleves-ig2i/ig2i-le4-poo-2018-tp6.svg?branch=master)](https://travis-ci.org/eleves-ig2i/ig2i-le4-poo-2018-tp6) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+# Session 6 [![Build Status](https://travis-ci.org/eleves-ig2i/ig2i-le4-poo-2018-tp6.svg?branch=master)](https://travis-ci.org/eleves-ig2i/ig2i-le4-poo-2018-tp6) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 ## Description
 
