@@ -234,4 +234,11 @@ public class Instance implements Serializable {
 		return this.nplanning.echangeIntraVehicule();
 	}
 
+	/**
+	 * Retourne un copie en profondeur du planning.
+	 * @return Planning
+	 */
+	public Planning getCopiePlanning() {
+		return this.nplanning.getCopie();
+	}
 }

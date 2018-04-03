@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -113,6 +115,20 @@ public class Vehicule implements Serializable {
 		this.capaciteutilisee = 0;
 		this.cout = 0.0;
 		this.ndepot = depot;
+	}
+
+	/**
+	 * Constructeur par copie.
+	 * @param vehicule TODO
+	 */
+	public Vehicule(Vehicule vehicule) {
+		this();
+		this.id = vehicule.id;
+		this.capacite = vehicule.capacite;
+		this.capaciteutilisee = vehicule.capaciteutilisee;
+		this.cout = vehicule.cout;
+		this.ndepot = vehicule.ndepot;
+		this.ensClients = vehicule.ensClients;
 	}
 
 	public Integer getId() {
@@ -624,5 +640,13 @@ public class Vehicule implements Serializable {
 		} else {
 			return false;
 		}
+	}
+
+	/**
+	 * Permet de retourner un copie en profondeur d'un véhicule.
+	 * @return Vehicule
+	 */
+	public Vehicule getCopie() {
+		return new Vehicule(this);
 	}
 }

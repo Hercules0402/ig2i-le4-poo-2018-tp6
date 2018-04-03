@@ -74,6 +74,22 @@ public class Planning implements Serializable {
 		this.cout = cout;
 	}
 
+	/**
+	 * Constructeur par copie.
+	 * @param planning TODO
+	 */
+	public Planning(Planning planning) {
+		this();
+		if (this != null) {
+			this.cout = planning.cout;
+			this.ninstance = planning.ninstance;
+			this.id = planning.id;			
+			for (Vehicule v : planning.ensVehicules) {
+				this.ensVehicules.add(v.getCopie());
+			} 
+		}
+	}
+
 	public Integer getId() {
 		return id;
 	}
@@ -243,5 +259,13 @@ public class Planning implements Serializable {
 			return intraTourneeInfos.doEchangeIntraTournee();
 		}
 		return false;
+	}
+
+	/**
+	 * Permet de retourner un copie en profondeur d'un planning.
+	 * @return Planning
+	 */
+	public Planning getCopie() {
+		return new Planning(this);
 	}
 }
