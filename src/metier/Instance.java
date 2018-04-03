@@ -241,4 +241,23 @@ public class Instance implements Serializable {
 	public Planning getCopiePlanning() {
 		return this.nplanning.getCopie();
 	}
+
+	/**
+	 * Permet de mettre à jour le planning.
+	 * @param p TODO
+	 * @return boolean
+	 */
+	public boolean setPlanning(Planning p) {
+		if (p != null) {
+			if (p.check()) {
+				this.nplanning = p;
+				this.vehiculeSet = p.getEnsVehicules();
+				this.updatePositions();
+			} else {
+				return false;
+			}
+		} else {
+			return false;
+		}
+	}
 }
